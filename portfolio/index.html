@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <title>Monisha| Web Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+body {
+  padding-top: 80px; /* Prevents content hiding behind fixed navbar */
+}
+    body {
+      background-image: url('background.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      backdrop-filter: brightness(0.5);
+      background-attachment: fixed;
+      
+    }
+/* 3D Card Flip */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 250px;
+  perspective: 1000px;
+  transition: transform 0.5s, box-shadow 0.5s, border 0.5s;
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.4),
+              0 0 40px rgba(0, 140, 255, 0.2),
+              0 0 60px rgba(0, 140, 255, 0.1);
+  border: 2px solid rgba(0, 140, 255, 0.3);
+}
+
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 1rem;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  box-shadow: 0 0 20px rgba(192, 192, 192, 0.7),
+              0 0 40px rgba(192, 192, 192, 0.5),
+              0 0 60px rgba(192, 192, 192, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+
+.flip-card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+  </style>
+</head>
+<body class="text-gray-100 bg-black">
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md shadow-md">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-gray-200">
+      <h1 class="text-2xl font-bold text-blue-400">Monisharamadurai</h1>
+      <ul class="flex space-x-6 text-lg font-medium">
+        <li><a href="#about" class="hover:text-blue-400 transition duration-300">About</a></li>
+        <li><a href="#projects" class="hover:text-blue-400 transition duration-300">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-400 transition duration-300">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col items-center justify-center min-h-screen text-center pt-20">
+    <h2 class="text-5xl font-bold mb-6">Hi, I'm <span class="text-blue-400">Monisha</span></h2>
+    <p class="text-xl mb-8 text-gray-300">A Front-End Developer building aesthetic, modern websites.</p>
+    <a href="#projects" class="bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition-all">View My Work</a>
+  </section>
+
+  <!-- About Me Section -->
+<section id="about" class="py-20 px-10 bg-black bg-opacity-60">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-blue-400 mb-6">About Me</h2>
+      <div class="text-gray-300 max-w-xl mx-auto">
+        <p class="mb-4">I'm monisha, a passionate front-end developer focused on building beautiful and functional websites. I specialize in "HTML", "CSS", "Tailwind CSS", and "JavaScript". I strive to create designs that are both user-friendly and visually appealing.</p>
+        <p>With a love for clean code and a keen eye for detail, I bring your web ideas to life. My goal is to make websites that look great on any device while providing smooth user experiences.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Projects Section -->
+<section id="projects" class="py-20 px-10 bg-gray-900 bg-opacity-70">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-blue-400 mb-16">My Projects</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      
+      <!-- Single Card -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+
+          <!-- Front -->
+          <div class="flip-card-front bg-gradient-to-r from-black via-blue-900 to-black rounded-2xl p-8 flex items-center justify-center text-white font-bold text-2xl">
+            Streamra OTT Platform
+          </div>
+
+          <!-- Back -->
+          <div class="flip-card-back bg-gray-900 rounded-2xl p-6 flex flex-col items-center justify-center text-gray-200">
+            <p class="mb-4"> A unique OTT app featuring ‘Watch and Shop’ and ‘Watch together’ functionalities. Built with React, Tailwind CSS.  
+            </p> 
+          </p>.</p>
+            <a href="#" class="text-blue-400 hover:underline">View Project</a>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Copy from <div class="flip-card">...</div> for more cards -->
+
+        <!--contact section-->
+  <section id="contact" class="py-20 px-6 text-center text-gray-300" data-aos="fade-up" data-aos-duration="1500">
+    <h2 class="text-4xl font-bold mb-6" data-aos="zoom-in" data-aos-delay="300">Contact Me</h2>
+    <p class="max-w-2xl mx-auto text-lg mb-8" data-aos="fade" data-aos-delay="600">
+      Interested in working together or have a cool project idea? Let’s connect! ✨
+    </p>
+    <a href="mailto:monishaaramadurai@gmail.com"
+       class="inline-block bg-blue-600 hover:bg-white hover:text-blue-700 font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg"
+       data-aos="zoom-in-up" data-aos-delay="900">
+      Send an Email
+    </a>
+    <a href="https://wa.me/918940107345" 
+   target="_blank" 
+   class="inline-block bg-green-600 hover:bg-white hover:text-green-700 font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg mt-4"
+   data-aos="zoom-in-up" data-aos-delay="1100">
+  Chat on WhatsApp
+</a>
+
+  </section>
+
+    </div>
+  </div>
+</section>
+
+  
+</body>
+</html>
